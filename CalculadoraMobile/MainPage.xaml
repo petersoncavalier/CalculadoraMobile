@@ -1,0 +1,227 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraMobile.MainPage"
+             BackgroundColor="#1e1e1e">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Label x:Name="labelC"
+               FontSize="35"
+               FontAttributes="Bold"
+               Text="0"
+               Padding="10"
+               TextColor="White"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Start"
+               LineBreakMode="NoWrap"
+               Grid.Row="0"
+               Grid.ColumnSpan="4"/>
+        
+        <Label x:Name="labelAcumular"
+               FontSize="35"
+               FontAttributes="Bold"
+               Padding="10"
+               TextColor="White"
+               Text="0"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="End"
+               LineBreakMode="NoWrap"
+               Grid.Row="0"
+               Grid.ColumnSpan="4"/>
+        
+        <Label x:Name="labelResultado"
+               FontSize="75"
+               FontAttributes="Bold"
+               Padding="10"
+               TextColor="White"
+               Text=" 0"
+               VerticalTextAlignment="Start"
+               HorizontalTextAlignment="End"
+               LineBreakMode="NoWrap"
+               Grid.Row="1"
+               Grid.RowSpan="2"
+               Grid.ColumnSpan="4"/>
+
+
+
+
+        <Button Text="MC" Grid.Row="3" Grid.Column="0"
+                FontSize="15"
+                TextColor="White"
+                BorderWidth="7"
+                BorderColor="#1e1e1e"
+                BackgroundColor="#0f0f0f"
+                Clicked="buttonMC_Click"/>
+        <Button Text="M-" Grid.Row="3" Grid.Column="1"
+                FontSize="15"
+                TextColor="White"
+                BorderWidth="7"
+                BorderColor="#1e1e1e"
+                BackgroundColor="#0f0f0f"
+                Clicked="buttonMMenos_Click"/>
+        <Button Text="M+" Grid.Row="3" Grid.Column="2"
+                FontSize="15"
+                TextColor="White"
+                BorderWidth="7"
+                BorderColor="#1e1e1e"
+                BackgroundColor="#0d0d0d"
+                Clicked="buttoMMais_Click"/>
+        <Button Text="MS" Grid.Row="3" Grid.Column="3"
+                FontSize="15"
+                TextColor="White"
+                BorderWidth="7"
+                BorderColor="#1e1e1e"
+                BackgroundColor="#0d0d0d"
+                Clicked="buttonMS_Click"/>
+
+       
+
+        <Button Text="C" Grid.Row="4" Grid.Column="0"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="buttonC_Click"/>
+        <Button Text="CE" Grid.Row="4" Grid.Column="1"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="buttonCe_Click"/>
+        <Button Text="%" Grid.Row="4" Grid.Column="2"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="buttonPercentual_Click"/>
+        <Button Text="Del" Grid.Row="4" Grid.Column="3"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="buttonApagar_Click"/>
+
+        <Button Text="¹/x" Grid.Row="5" Grid.Column="0"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="button1X_Click"/>
+        <Button Text="x²" Grid.Row="5" Grid.Column="1"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="buttonX2_Click"/>
+        <Button Text="²√x" Grid.Row="5" Grid.Column="2"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="button2vx_Click"/>
+        <Button Text="÷" Grid.Row="5" Grid.Column="3"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="buttonDivisao_Click"/>
+
+        <Button Text="7" Grid.Row="6" Grid.Column="0"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button7_Click"/>
+        <Button Text="8" Grid.Row="6" Grid.Column="1"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button8_Click"/>
+        <Button Text="9" Grid.Row="6" Grid.Column="2"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button9_Click"/>
+        <Button Text="×" Grid.Row="6" Grid.Column="3"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="buttonMultiplicacao_Click"/>
+
+        <Button Text="4" Grid.Row="7" Grid.Column="0"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button4_Click"/>
+        <Button Text="5" Grid.Row="7" Grid.Column="1"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button5_Click"/>
+        <Button Text="6" Grid.Row="7" Grid.Column="2"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button6_Click"/>
+        <Button Text="-" Grid.Row="7" Grid.Column="3"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="buttonSubtracao_Click"/>
+
+        <Button Text="1" Grid.Row="8" Grid.Column="0"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button1_Click"/>
+        <Button Text="2" Grid.Row="8" Grid.Column="1"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button2_Click"/>
+        <Button Text="3" Grid.Row="8" Grid.Column="2"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button3_Click"/>
+        <Button Text="+" Grid.Row="8" Grid.Column="3"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#121212"
+                Clicked="buttonSoma_Click"/>
+
+        <Button Text="+/-" Grid.Row="9" Grid.Column="0"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="buttonMaisMenos_Click"/>
+        <Button Text="0" Grid.Row="9" Grid.Column="1"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="button0_Click"/>
+        <Button Text="," Grid.Row="9" Grid.Column="2"
+                FontSize="36"
+                TextColor="White"
+                BackgroundColor="#050505"
+                Clicked="buttonVirgula_Click"/>
+        <Button Text="=" Grid.Row="9" Grid.Column="3"
+                FontSize="36"
+                TextColor="Black"
+                BackgroundColor="MediumTurquoise"
+                Clicked="buttonIgual_Click"/>
+
+
+
+    </Grid>
+</ContentPage>
